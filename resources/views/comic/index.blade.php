@@ -1,6 +1,7 @@
 @extends('layout.app')
 
 @section('page.main')
+
     @foreach ($comics as $comic)
         <a href="{{ route('comics.show', $comic->id)}}">{{$comic->title}}  {{$comic->price}} </a><br>
     @endforeach
