@@ -18,5 +18,6 @@
     <footer>
         <h1>FOOTER</h1>
     </footer>
+    <script src="../../js/main.js"></script>
 </body>
 </html>

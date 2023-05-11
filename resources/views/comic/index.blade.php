@@ -7,7 +7,7 @@
         <form action="{{route('comics.destroy', $comic->id)}}" method="POST">
             @csrf
             @method('DELETE')
-            <input type="submit" value="Cancella" >
+            <input type="submit" id="delete" value="Cancella" >
         </form>
     @endforeach
 
