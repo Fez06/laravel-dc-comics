@@ -7,4 +7,5 @@
         <h3>Price:{{$comic->price}}</h3>
     </div>
     
+    <h3><a href="{{ route('comics.index')}}">Torna indietro</a></h3>
 @endsection

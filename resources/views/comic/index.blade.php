@@ -2,6 +2,8 @@
 
 @section('page.main')
     @foreach ($comics as $comic)
-        {{$comic->title}} {{$comic->price}}
+        <a href="{{ route('comics.show', $comic->id)}}">{{$comic->title}}  {{$comic->price}} </a><br>
     @endforeach
+
+    <h3><a href="{{ route('comics.create') }}">Crea un nuovo prodotto!</a></h3>
 @endsection
