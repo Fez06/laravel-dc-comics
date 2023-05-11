@@ -7,10 +7,11 @@
          @vite('resources/js/app.js')
     </head>
 
-    
+
     <body>
         <h1>sei nella home</h1>
 
+        <a href="{{ route('comics.index')}}">vai a index</a>
         
     </body>
 </html>
