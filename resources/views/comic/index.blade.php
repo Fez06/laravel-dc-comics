@@ -1,7 +1,7 @@
-@extends('layout.app');
+@extends('layout.app')
 
 @section('page.main')
     @foreach ($comics as $comic)
-        'ciao'
+        {{$comic->title}} {{$comic->price}}
     @endforeach
 @endsection
