@@ -41,9 +41,21 @@ class ComicController extends Controller
     {
         $data = $request->all();
 
+        $request->validate([
+            'title' => 'required|max:100',
+            'description' => 'nullable|max:255',
+            'thumb' => 'nullable|max:255',
+            'price' => 'required|numeric|decimal:2',
+            'series' => 'nullable|max:50',
+            'sale_date' => 'nullable|max:10',
+            'type' => 'nullable|max:50',
+            'artists' => 'nullable|max:255',
+            'writers' => 'nullable|max:255'
+        ]);
+
+
+
         $newComic = new Comic();
-        // $newComic->title = $data['title'];
-        // $newComic->price = $data['price'];
 
         $newComic->title = $data['title'];
         $newComic->description = $data['description'];
