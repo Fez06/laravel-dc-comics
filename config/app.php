@@ -1,8 +1,13 @@
 <?php
 
+// use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Facade;
 
+//App::setLocale('it');
+
 return [
+
+    
 
     /*
     |--------------------------------------------------------------------------
