@@ -17,7 +17,7 @@
     <ul>
         <li>
             <label for="name">Title</label>
-            <input type="text" name="title" id="title" class="@error('title') is-invalid @enderror">
+            <input type="text" name="title" id="title" value="{{ old('title')}}" class="@error('title') is-invalid @enderror">
             @error('title')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
@@ -25,7 +25,7 @@
 
         <li>
             <label for="description">Description</label>
-            <input type="text" id="description" name="description" class="@error('description') is-invalid @enderror">
+            <input type="text" id="description" name="description" value="{{ old('description')}}" class="@error('description') is-invalid @enderror">
             @error('description')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
@@ -33,7 +33,7 @@
 
         <li>
             <label for="thumb">Image link</label>
-            <input type="text" id="thumb" name="thumb" class="@error('thumb') is-invalid @enderror">
+            <input type="text" id="thumb" name="thumb" value="{{ old('thumb')}}" class="@error('thumb') is-invalid @enderror">
             @error('thumb')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
@@ -41,7 +41,7 @@
 
         <li>
             <label for="price">Price</label>
-            <input type="number" name="price" step="0.01" id="price" class="@error('price') is-invalid @enderror">
+            <input type="number" name="price" step="0.01" id="price" value="{{ old('price')}}" class="@error('price') is-invalid @enderror">
             @error('price')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
@@ -49,7 +49,7 @@
 
         <li>
             <label for="series">Series</label>
-            <input type="text" id="series" name="series" class="@error('series') is-invalid @enderror">
+            <input type="text" id="series" name="series" value="{{ old('series')}}" class="@error('series') is-invalid @enderror">
             @error('series')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
@@ -57,7 +57,7 @@
 
         <li>
             <label for="artists">Artists</label>
-            <input type="text" id="artists" name="artists" class="@error('artists') is-invalid @enderror">
+            <input type="text" id="artists" name="artists" value="{{ old('artists')}}" class="@error('artists') is-invalid @enderror">
             @error('artists')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
@@ -65,7 +65,7 @@
 
         <li>
             <label for="writers">Writers</label>
-            <input type="text" id="writers" name="writers" class="@error('writers') is-invalid @enderror">
+            <input type="text" id="writers" name="writers" value="{{ old('writers')}}" class="@error('writers') is-invalid @enderror">
             @error('writers')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
@@ -73,7 +73,7 @@
 
         <li>
             <label for="sale_date">Sale date:</label>
-            <input type="date" id="sale_date" name="sale_date" class="@error('sale_date') is-invalid @enderror">
+            <input type="date" id="sale_date" name="sale_date" value="{{ old('sale_date')}}" class="@error('sale_date') is-invalid @enderror">
             @error('sale_date')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror
@@ -81,7 +81,7 @@
 
         <li>
             <label for="type">Type:</label>
-            <input type="text" id="type" name="type" class="@error('type') is-invalid @enderror">
+            <input type="text" id="type" name="type" value="{{ old('type')}}" class="@error('type') is-invalid @enderror">
             @error('type')
                 <div class="alert alert-danger">{{$message}}</div>
             @enderror

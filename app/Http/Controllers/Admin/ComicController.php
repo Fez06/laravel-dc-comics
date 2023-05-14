@@ -108,6 +108,19 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
+
+        $request->validate([
+            'title' => 'required|max:100',
+            'description' => 'nullable|max:255',
+            'thumb' => 'nullable|max:255',
+            'price' => 'required|numeric|decimal:2',
+            'series' => 'nullable|max:50',
+            'sale_date' => 'nullable|max:10',
+            'type' => 'nullable|max:50',
+            'artists' => 'nullable|max:255',
+            'writers' => 'nullable|max:255'
+        ]);
+        
         $data = $request->all();
 
         $comic->update($data);
