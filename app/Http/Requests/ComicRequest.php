@@ -6,6 +6,8 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class ComicRequest extends FormRequest
 {
+
+   
     /**
      * Determine if the user is authorized to make this request.
      *
@@ -24,6 +26,7 @@ class ComicRequest extends FormRequest
      */
     public function rules()
     {
+        
         return [
             'title' => 'required|max:100',
             'description' => 'nullable|max:255',
