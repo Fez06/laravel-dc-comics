@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ComicRequest;
 use App\Models\Comic;
 use Illuminate\Http\Request;
 
@@ -37,23 +38,25 @@ class ComicController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ComicRequest $request)
     {
+        
+
+        // $request->validate([
+        //     'title' => 'required|max:100',
+        //     'description' => 'nullable|max:255',
+        //     'thumb' => 'nullable|max:255',
+        //     'price' => 'required|numeric|decimal:2',
+        //     'series' => 'nullable|max:50',
+        //     'sale_date' => 'nullable|max:10',
+        //     'type' => 'nullable|max:50',
+        //     'artists' => 'nullable|max:255',
+        //     'writers' => 'nullable|max:255'
+        // ]);
+
+        $validated = $request->validated();
+
         $data = $request->all();
-
-        $request->validate([
-            'title' => 'required|max:100',
-            'description' => 'nullable|max:255',
-            'thumb' => 'nullable|max:255',
-            'price' => 'required|numeric|decimal:2',
-            'series' => 'nullable|max:50',
-            'sale_date' => 'nullable|max:10',
-            'type' => 'nullable|max:50',
-            'artists' => 'nullable|max:255',
-            'writers' => 'nullable|max:255'
-        ]);
-
-
 
         $newComic = new Comic();
 
@@ -106,20 +109,22 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Comic $comic)
+    public function update(ComicRequest $request, Comic $comic)
     {
 
-        $request->validate([
-            'title' => 'required|max:100',
-            'description' => 'nullable|max:255',
-            'thumb' => 'nullable|max:255',
-            'price' => 'required|numeric|decimal:2',
-            'series' => 'nullable|max:50',
-            'sale_date' => 'nullable|max:10',
-            'type' => 'nullable|max:50',
-            'artists' => 'nullable|max:255',
-            'writers' => 'nullable|max:255'
-        ]);
+        // $request->validate([
+        //     'title' => 'required|max:100',
+        //     'description' => 'nullable|max:255',
+        //     'thumb' => 'nullable|max:255',
+        //     'price' => 'required|numeric|decimal:2',
+        //     'series' => 'nullable|max:50',
+        //     'sale_date' => 'nullable|max:10',
+        //     'type' => 'nullable|max:50',
+        //     'artists' => 'nullable|max:255',
+        //     'writers' => 'nullable|max:255'
+        // ]);
+
+        $request->validated();
         
         $data = $request->all();
 
